@@ -5,38 +5,120 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.start-screen-container {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.start-screen-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.start-screen-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #111827;
 }
 
-.card {
-  padding: 2em;
+.start-screen-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
 }
 
-.read-the-docs {
-  color: #888;
+.start-screen-line {
+  flex: 1;
+  height: 1px;
+  background-color: #d1d5db;
+}
+
+.start-screen-or {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.start-screen-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #111827;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.start-screen-button:hover {
+  background-color: #1f2937;
+}
+
+.dataset-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.dataset-controls {
+  background-color: #1f1f1f; /* ciemna karta */
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 50%;
+  color: #e5e7eb; /* jasna czcionka */
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.radio-group-title {
+  font-weight: 600;
+  color: #f9fafb;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.radio-group input[type="radio"] {
+  accent-color: #93c5fd; /* jasnoniebieski zaznaczony */
+  cursor: pointer;
+}
+
+/* styl dla input number jeśli go stylujesz ręcznie */
+input[type="number"] {
+  background-color: #2b2b2b;
+  color: #f3f4f6;
+  border: 1px solid #444;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
 }

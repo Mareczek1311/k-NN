@@ -13,3 +13,8 @@ export interface Dataset {
   minX2: number;
   maxX2: number;
 }
+
+export interface Neighbour {
+  sample: Sample;
+  distance: number;
+}

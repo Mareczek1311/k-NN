@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import "../App.css"
 
 interface InputFileProps {
   label: string;
@@ -6,10 +7,17 @@ interface InputFileProps {
 }
 
 const InputFile: React.FC<InputFileProps> = ({ label, handleSelectFile }) => {
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const handleButtonClick = () => {
+    fileInputRef.current!.click();
+  };
+
   return (
     <>
       <label>{label}</label>
-      <input type="file" onChange={handleSelectFile} />
+      <button className="start-screen-button" onClick={handleButtonClick}>Wybierz wlasne</button>
+      <input style={{ display: 'none' }} ref={fileInputRef} type="file" onChange={handleSelectFile} />
     </>
   );
 };
